@@ -32,14 +32,22 @@ CREATE TABLE Employee (
   position VARCHAR(255)
 );
 
--- Tạo bảng Address
-CREATE TABLE Address (
-  id INTEGER PRIMARY KEY AUTO_INCREMENT,
-  city VARCHAR(255) NOT NULL,
-  country VARCHAR(255) NOT NULL,
-  amount FLOAT,
-  requiresVisa BOOLEAN NOT NULL
-);
+-- bang diem di
+Table departureAddress {
+  id Integer [primary key, increment]
+  city VARCHAR(255) [not null]
+  country VARCHAR(255) [not null]
+  amount FLOAT
+}
+
+-- bang diem den
+Table ArrivalAddress {
+  id Integer [primary key, increment]
+  city VARCHAR(255) [not null]
+  country VARCHAR(255) [not null]
+  amount FLOAT
+  requiresVisa BOOLEAN [not null]
+}
 
 -- Tạo bảng Flight
 CREATE TABLE Flight (
