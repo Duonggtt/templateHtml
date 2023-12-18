@@ -52,8 +52,8 @@ Table ArrivalAddress {
 -- Tạo bảng Flight
 CREATE TABLE Flight (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
-  departureAddressID INTEGER REFERENCES Address(id),
-  arrivalAddressID INTEGER REFERENCES Address(id),
+  departureAddressID INTEGER REFERENCES departureAddress(id),
+  arrivalAddressID INTEGER REFERENCES ArrivalAddress(id),
   flightTime INT,
   departureTime DATETIME,
   arrivalTime DATETIME,
