@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lịch sử mượn trả</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/assets/css/adminStyle.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="container">
+
+        <!-- sidebar -->
+        <div class="wrapper d-flex align-items-stretch">
+            <nav id="sidebar">
+                <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle" style="background-image: url(/assets/img/beluga.jpg);"></a>
+                <h4 class="logo-name"><a href="#">Admin-LibExpress</a></h1>
+                    <ul class="list-unstyled components mb-5">
+                        <li>
+                            <a href="/html/admin/index.html">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Quản lý độc giả</a>
+                            <ul class="collapse list-unstyled" id="userSubmenu">
+                                <li>
+                                    <a href="/html/admin/user.html">Danh sách độc giả</a>
+                                </li>
+                                <li>
+                                    <a href="/html/admin/user-add.html">Thêm mới độc giả</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#bookSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Quản lý kho sách</a>
+                            <ul class="collapse list-unstyled" id="bookSubmenu">
+                                <li>
+                                    <a href="/html/admin/book.html">Kho sách</a>
+                                </li>
+                                <li>
+                                    <a href="/html/admin/book-create.html">Thêm sách mới</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/html/admin/category.html">Danh sách danh mục</a>
+                        </li>
+                        <li>
+                            <a href="/html/admin/nxb.html">Quản lý NXB</a>
+                        </li>
+                        <li>
+                            <a href="/html/admin/author.html">Quản lý tác giả</a>
+                        </li>
+                        <li class="active">
+                            <a href="#borrowSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Quản lý phiếu mượn</a>
+                            <ul class="collapse list-unstyled" id="borrowSubmenu">
+                                <li>
+                                    <a href="/html/admin/borrow.html">Danh sách phiếu mượn</a>
+                                </li>
+                                <li>
+                                    <a href="/html/admin/borrow-create.html">Tạo phiếu mượn</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#newsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Quản lý tin tức</a>
+                            <ul class="collapse list-unstyled" id="newsSubmenu">
+                                <li>
+                                    <a href="#">Danh sách các tin tức</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tạo tin tức mới</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/html/admin/history.html">Lịch sử mượn</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- content  -->
+            <div id="content">
+                <!-- navbar -->
+                <nav class="content-navbar navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                        </button>
+                        <!-- <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa-solid fa-gear"></i>
+                        </button> -->
+
+                        <div class="" id="navbarSupportedContent">
+                        
+                        <ul class="nav ml-auto">
+                            <li class="nav-item" style="margin-top: 4px; margin-right: 10px;">
+                                <!-- Rounded switch -->
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Log out</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- noi dung chinh -->
+                <div class="content-header">
+                    <!-- header-content -->
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="/html/admin/index.html">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        Lịch sử mượn trả
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Main content -->
+                    <section class="content">
+                        <div class="container-fluid">
+
+                            <div class="row py-2">
+                                <div class="col-12">
+                                    <a href="#" type="button" class="btn btn-info">
+                                        <i class="fas fa-redo"></i> Refresh
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <table class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Mã độc giả</th>
+                                                        <th>Tên độc giả</th>
+                                                        <th>Sách mượn</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Ngày mượn</th>
+                                                        <th>Ngày trả</th>
+                                                        <th>Trạng thái</th>
+                                                        <th>Chi tiết</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>2</td>
+                                                        <td>Trần Tùng Dương</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>Sáchhhhhhhhhhhhhhhhhhhhhhhhhhhhh 1</li>
+                                                                <li>Sách 2</li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td>20/11/2003</td>
+                                                        <td>30/17/2003</td>
+                                                        <td><p class="text-success">Đã trả</p></td>
+                                                        <td><a href="">Xem chi tiết</a></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                        <td>Trần Tùng Dương</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>Sách 1</li>
+                                                                <li>Sáchhhhhhhhhhhhhhhhhhhhhhhhhhhhh 1</li>
+                                                                <li>Sách 3</li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>3</td>
+                                                        <td>20/11/2003</td>
+                                                        <td>30/17/2003</td>
+                                                        <td><p class="text-success">Đã trả</p></td>
+                                                        <td><a href="">Xem chi tiết</a></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>3</td>
+                                                        <td>Trần Tùng Dương</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>Sách 1</li>
+                                                                <li>Sách 2</li>
+                                                                <li>Sách 3</li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>3</td>
+                                                        <td>20/11/2003</td>
+                                                        <td>30/17/2003</td>
+                                                        <td><p class="text-success">Đã trả</p></td>
+                                                        <td><a href="">Xem chi tiết</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                
+                                            <div class="d-flex justify-content-center mt-3" id="pagination" >
+                                                <nav aria-label="Page navigation example">
+                                                    <ul class="pagination">
+                                                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                                    </ul>
+                                                  </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <!-- Thêm Bootstrap JS và jQuery (cần cho Bootstrap) -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
