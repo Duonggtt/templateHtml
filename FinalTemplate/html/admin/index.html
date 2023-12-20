@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="../../assets/img/favicon.png" rel="icon">
     <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -13,12 +13,12 @@
     <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
           integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <title>LibExpress-Admin</title>
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <title>ADMIN</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../../assets/css/adminStyle.css" rel="stylesheet">
 </head>
 <body>
@@ -28,7 +28,7 @@
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar">
             <div class="p-4 pt-5">
-                <a href="#" class="img logo rounded-circle"
+                <a class="img logo rounded-circle" href="#"
                    style="background-image: url(../../assets/img/beluga.jpg);"></a>
                 <h4 class="logo-name"><a href="#">Admin-LibExpress</a></h4>
                 <ul class="list-unstyled components mb-5">
@@ -36,7 +36,7 @@
                         <a href="./index.html">Dashboard</a>
                     </li>
                     <li>
-                        <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <a aria-expanded="false" class="dropdown-toggle" data-toggle="collapse" href="#userSubmenu">
                             Quản lý độc giả</a>
                         <ul class="collapse list-unstyled" id="userSubmenu">
                             <li><a href="./user.html">Danh sách độc giả</a></li>
@@ -45,7 +45,7 @@
                     </li>
 
                     <li>
-                        <a href="#bookSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <a aria-expanded="false" class="dropdown-toggle" data-toggle="collapse" href="#bookSubmenu">
                             Quản lý kho sách</a>
                         <ul class="collapse list-unstyled" id="bookSubmenu">
                             <li><a href="./book.html">Kho sách</a></li>
@@ -61,7 +61,7 @@
                         <a href="./author.html">Quản lý tác giả</a>
                     </li>
                     <li>
-                        <a href="#borrowSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Quản
+                        <a aria-expanded="false" class="dropdown-toggle" data-toggle="collapse" href="#borrowSubmenu">Quản
                             lý phiếu mượn</a>
                         <ul class="collapse list-unstyled" id="borrowSubmenu">
                             <li>
@@ -73,7 +73,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#newsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Quản
+                        <a aria-expanded="false" class="dropdown-toggle" data-toggle="collapse" href="#newsSubmenu">Quản
                             lý tin tức</a>
                         <ul class="collapse list-unstyled" id="newsSubmenu">
                             <li>
@@ -97,7 +97,7 @@
             <nav class="content-navbar navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <button class="btn btn-primary" id="sidebarCollapse" type="button">
                         <i class="fa fa-bars"></i>
                         <span class="sr-only">Toggle Menu</span>
                     </button>
@@ -145,7 +145,7 @@
                 <section class="content">
                     <div class="container-fluid">
                         <div class="genrp-btn">
-                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            <a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" href="#"><i
                                     class="fas fa-download fa-sm text-white-50"></i> Xuất báo cáo</a>
                         </div>
                         <div class="row">
@@ -252,11 +252,11 @@
                                         <h6 class="m-0 font-weight-bold text-primary">Doanh thu năm <span
                                                 style="color: orange;">2023</span></h6>
                                         <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown"
+                                               href="#" id="dropdownMenuLink" role="button">
                                             </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                                 aria-labelledby="dropdownMenuLink">
+                                            <div aria-labelledby="dropdownMenuLink"
+                                                 class="dropdown-menu dropdown-menu-right shadow animated--fade-in">
                                                 <a class="dropdown-item" href="#">Doanh thu năm trước</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="#">Doanh thu năm nay</a>
@@ -265,9 +265,9 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="chart-area">
-                                            <canvas id="myAreaChart" width="972" height="400"
+                                            <canvas class="chartjs-render-monitor" height="400" id="myAreaChart"
                                                     style="display: block; height: 320px; width: 778px;"
-                                                    class="chartjs-render-monitor"></canvas>
+                                                    width="972"></canvas>
                                         </div>
                                     </div>
                                 </div>
