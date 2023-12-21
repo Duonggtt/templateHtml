@@ -1,7 +1,11 @@
+/*#region RegionName*/
+
+/*#endregion */
+
+
 :root {
     --mau-xanh-chu-dao: #75c392;
 }
-
 
 body {
     background-color: #21344f;
@@ -37,6 +41,7 @@ body {
     color: #FFFFFF;
 }
 
+
 .navbar-nav a.nav-link:focus-within,
 .navbar-nav a.nav-link:hover {
     color: var(--mau-xanh-chu-dao) !important;
@@ -69,7 +74,6 @@ body {
     font-size: xx-large;
     text-align: center;
     color: var(--mau-xanh-chu-dao);
-
 }
 
 .title-item {
@@ -104,5 +108,27 @@ body {
 }
 
 .form-group input::placeholder {
-    color: rgba(124, 124, 124, 0.36);
+    color: rgba(124, 124, 124, 0.65);
 }
+
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+
+/*#region RegionName*/
+
+.modal-backdrop {
+    z-index: unset;
+}
+
+/*#endregion */

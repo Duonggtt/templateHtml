@@ -1,3 +1,7 @@
+<link href="assets/css/style_Sign_in_up.css" rel="stylesheet">
+<script>$(function () {
+    $("#login").load("login.html");
+});</script>
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <!-- Logo -->
@@ -27,15 +31,32 @@
                     <a class="nav-link" href="#">Phản hồi</a>
                 </li>
                 <li class="nav-item">
-                    <a href="User_Register.html ">
-                        <button class="btn btn-success">Đăng ký</button>
-                    </a>
+                    <button class="btn btn-success">Đăng ký</button>
                 </li>
                 <li class="nav-item">
-                    <a href="User_Login.html">
-                        <button class="btn btn-outline-light">Đăng nhập</button>
-                    </a>
+                    <div>
+                        <button class="btn btn-outline-light show-modal" data-target="#myModal"
+                                data-toggle="modal"
+                                type="button">Đăng nhập
+                        </button>
+                        <div id="login"></div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            $('#myTabs a').click(function (e) {
+                                e.preventDefault();
+                                $(this).tab('show');
+                            });
 
+                            // Xử lý sự kiện khi nút trigger được nhấp
+                            $('.show-modal').click(function () {
+                                // Mở modal và chuyển đến tab đăng nhập
+                                $('#myModal').modal('show');
+                                $('#login-tab').tab('show');
+                            });
+                        });
+
+                    </script>
                 </li>
             </ul>
         </div>

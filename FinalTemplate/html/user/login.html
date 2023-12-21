@@ -1,0 +1,192 @@
+<link href="assets/css/style_Sign_in_up.css" rel="stylesheet">
+<script>
+    $(document).ready(function () {
+        $('#myTabs a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+
+        // Xử lý sự kiện khi nút trigger được nhấp
+        $('.show-modal').click(function () {
+            // Mở modal và chuyển đến tab đăng nhập
+            $('#myModal').modal('show');
+            $('#login-tab').tab('show');
+        });
+    });
+
+</script>
+
+
+<div class="container flex justify-content-center align-items-center">
+    <div aria-labelledby="myModalLabel col-md-8" class="modal fade" id="myModal" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content clearfix">
+                <div class="modal-body ">
+                    <div class="form-group">
+                        <!-- Tabs -->
+                        <ul class="nav nav-tabs " id="myTabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab"
+                                   href="#login-content"
+                                   id="login-tab">Đăng nhập</a>
+
+                            </li>
+                            <li class="nav-item pl-5">
+                                <a class="nav-link" data-toggle="tab" href="#register-content"
+                                   id="register-tab">Đăng ký</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Contents -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="login-content">
+                                <form id="login-form">
+                                    <div class="form-group ">
+
+
+                                        <!-- Login Form -->
+                                        <div class="row form-container-items mx-auto">
+                                            <div class="col-md">
+                                                <h5 class="title-item">Tên đăng nhập</h5>
+                                                <input class="form-control"
+                                                       placeholder="UserName"
+                                                       type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-container-items mx-auto">
+                                            <div class="col-md">
+                                                <h5 class="title-item">Mật khẩu</h5>
+                                                <input class="form-control" placeholder="******"
+                                                       type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-container-items mx-auto">
+                                            <div class="col-md-6">
+                                                <div class="form-check mb-5">
+                                                    <input class="form-check-input"
+                                                           id="chk_savePass"
+                                                           type="checkbox" value="">
+                                                    <label class="form-check-label"
+                                                           for="chk_savePass"
+                                                           style="">
+                                                        Nhớ cho lần sau
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button class="btn btn-dang-nhap" type="submit">
+                                                    Đăng
+                                                    nhập
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="register-content">
+                                <form>
+                                    <!-- Login reg -->
+                                    <div class="form-group">
+                                        <div class="row form-container-items mx-auto">
+                                            <div class="col-md">
+                                                <h5 class="title-item">Tên đăng nhập</h5>
+                                                <input class="form-control" id="UserName"
+                                                       placeholder="UserName" type="text">
+                                            </div>
+
+                                            <div class="col-md">
+                                                <h5 class="title-item">Email</h5>
+                                                <input class="form-control" id="Email"
+                                                       placeholder="abc@gmail.com" type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-container-items mx-auto">
+
+                                            <div class="col-md-6">
+                                                <h5 class="title-item">Mật khẩu</h5>
+                                                <input class="form-control"
+                                                       placeholder="********"
+                                                       type="text">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5 class="title-item">Nhập lại mật khẩu</h5>
+                                                <input class="form-control"
+                                                       placeholder="********"
+                                                       type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-container-items mx-auto">
+                                            <div class="col-md-6">
+                                                <h5 class="title-item">Họ tên đệm</h5>
+                                                <input class="form-control"
+                                                       placeholder="Nguyễn Văn"
+                                                       type="text">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5 class="title-item">Tên </h5>
+                                                <input class="form-control" placeholder="An"
+                                                       type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-container-items mx-auto">
+                                            <div class="col-md-6">
+                                                <h5 class="title-item">Số điện thoại </h5>
+                                                <input class="form-control"
+                                                       placeholder="0777 777 777"
+                                                       type="text">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5 class="title-item">Số CMND/ CCCD </h5>
+                                                <input class="form-control"
+                                                       placeholder="0312030001234"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                        <div class="row form-container-items mx-auto">
+                                            <div class="col-md-12">
+                                                <h5 class="title-item">Địa chỉ</h5>
+                                                <input class="form-control"
+                                                       placeholder="Địa chỉ"
+                                                       type="text">
+                                            </div>
+
+                                        </div>
+                                        <div class="row form-container-items mx-auto">
+                                            <div class="col-md-6">
+                                                <div class="form-check pt-3">
+                                                    <input class="form-check-input"
+                                                           id="flexCheckDefault"
+                                                           type="checkbox" value="">
+                                                    <label class="form-check-label"
+                                                           for="flexCheckDefault"
+                                                           style="font-size: 11px ;">
+                                                        Tôi đã đọc và đồng ý với
+                                                        <span style="color: #00d76c;"> Điều khoản</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button class="btn btn-dang-ky"
+                                                        href="#login-content"
+                                                        type="submit">
+                                                    Đăng ký
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
