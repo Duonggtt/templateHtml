@@ -8,23 +8,22 @@
 }
 
 body {
-    background-color: #21344f;
+    background-color: #006bff;
     font-family: "Montserrat Medium", serif;
     background-image: url('../img/bg-home.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+
     margin: 0;
     padding: 0;
 }
 
 .navbar {
-
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-
     padding: 3% !important;
 }
 
@@ -50,7 +49,6 @@ body {
 .nav-item .btn {
     width: 150px !important;
 }
-
 
 .page-container {
     margin: 0;

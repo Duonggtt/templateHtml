@@ -11,7 +11,6 @@ body {
 }
 
 .navbar {
-
     position: fixed;
     top: 0;
     width: 100%;
@@ -47,7 +46,7 @@ body {
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
 }
 
@@ -79,10 +78,6 @@ body {
 /*#endregion           CSS navbar*/
 
 
-body {
-    background-image: none !important;
-}
-
 .nav-item #register-tab {
     margin-left: 50px;
 }
@@ -111,7 +106,7 @@ body {
 }
 
 
-.btn-dang-nhap, .btn-dang-ky {
+.col-md-6 .btn-dang-nhap, .col-md-6 .btn-dang-ky {
     background-color: #00a87d !important;
     width: 100% !important;
     font-family: "Montserrat SemiBold", sans-serif;
