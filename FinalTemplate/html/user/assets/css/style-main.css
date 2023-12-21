@@ -104,5 +104,5 @@ body {
 }
 
 .form-group input::placeholder {
-    color: #7c7c7c;
+    color: rgba(124, 124, 124, 0.36);
 }
