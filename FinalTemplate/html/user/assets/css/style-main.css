@@ -8,127 +8,13 @@
 }
 
 body {
-    background-color: #006bff;
-    font-family: "Montserrat Medium", serif;
+    background-color: #21344f ;
+    font-family: "Montserrat SemiBold", sans-serif;
     background-image: url('../img/bg-home.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-
     margin: 0;
     padding: 0;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 3% !important;
-}
-
-.nav-item {
-    font-family: "Montserrat SemiBold", sans-serif;
-    color: #FFFFFF;
-    font-size: large;
-    width: 150px;
-    margin: 0.5em;
-}
-
-.nav-item a {
-    font-family: "Montserrat SemiBold", sans-serif;
-    color: #FFFFFF;
-}
-
-
-.navbar-nav a.nav-link:focus-within,
-.navbar-nav a.nav-link:hover {
-    color: var(--mau-xanh-chu-dao) !important;
-}
-
-.nav-item .btn {
-    width: 150px !important;
-}
-
-.page-container {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-
-.form-container {
-    background-color: #fff;
-    padding: 2%;
-    border-radius: 5%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: 8%;
-    margin-top: 8%;
-}
-
-.title-form {
-    font-family: "Montserrat ExtraBold", sans-serif;
-    font-size: xx-large;
-    text-align: center;
-    color: var(--mau-xanh-chu-dao);
-}
-
-.title-item {
-    font-family: "Montserrat SemiBold", sans-serif;
-    color: #80a1af;
-}
-
-.dropdown-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.form-container-items {
-    padding-top: 5%;
-}
-
-.btn-dat-ngay {
-    width: 100% !important;
-    background-color: #a55eea !important;
-    font-family: "Montserrat SemiBold", sans-serif;
-    color: #FFFFFF;
-    padding: 5%;
-
-}
-
-.form-check-label {
-    color: #7c7c7c;
-    font-family: "Montserrat Medium", sans-serif;
-}
-
-.form-group input::placeholder {
-    color: rgba(124, 124, 124, 0.65);
-}
-
-
-#popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
-
-
-/*#region RegionName*/
-
-.modal-backdrop {
-    z-index: unset;
-}
-
-/*#endregion */

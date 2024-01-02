@@ -1,4 +1,5 @@
 <link href="assets/css/style_Sign_in_up.css" rel="stylesheet">
+
 <script>
     $(document).ready(function () {
         $('#myTabs a').click(function (e) {
@@ -12,6 +13,12 @@
             $('#myModal').modal('show');
             $('#login-tab').tab('show');
         });
+
+        // Xử lý sự kiện khi icon đóng form được nhấp
+        $('.close-form-icon').click(function () {
+            // Đóng modal khi icon được nhấp
+            $('#myModal').modal('hide');
+        });
     });
 
 </script>
@@ -23,19 +30,22 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content clearfix">
                 <div class="modal-body ">
-                    <div class="form-group">
+                    <div class=" form-group ">
                         <!-- Tabs -->
-                        <ul class="nav nav-tabs " id="myTabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab"
-                                   href="#login-content"
-                                   id="login-tab">Đăng nhập</a>
-                            </li>
-                            <li class="nav-item pl-5">
-                                <a class="nav-link" data-toggle="tab" href="#register-content"
-                                   id="register-tab">Đăng ký</a>
-                            </li>
-                        </ul>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <ul class="col-md nav nav-tabs pr-5" id="myTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" data-toggle="tab" href="#login-content" id="login-tab" aria-selected="true" role="tab">Đăng nhập</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" href="#register-content" id="register-tab" aria-selected="false" role="tab" tabindex="-1">Đăng ký</a>
+                                </li>
+                            </ul>
+                            <div class="col-md-3 close-form-icon  ">
+
+                            </div>
+                        </div>
 
                         <!-- Tab Contents -->
                         <div class="tab-content">
@@ -74,7 +84,8 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md"></div>
+                                            <div class="col-md-4">
                                                 <button class="btn btn-dang-nhap" type="submit">
                                                     Đăng nhập
                                                 </button>
@@ -165,13 +176,14 @@
                                                            type="checkbox" value="">
                                                     <label class="form-check-label"
                                                            for="flexCheckDefault"
-                                                           style="font-size: 11px ;">
+                                                           style="font-size: 15px ;">
                                                         Tôi đã đọc và đồng ý với
                                                         <span style="color: #00d76c;"> Điều khoản</span>
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md"></div>
+                                            <div class="col-md-4">
                                                 <button class="btn btn-dang-ky" href="#login-content" type="submit">
                                                     Đăng ký
                                                 </button>

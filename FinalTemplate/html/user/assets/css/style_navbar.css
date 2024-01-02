@@ -1,0 +1,93 @@
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1% 5% 1% 5%  ;
+}
+
+#navbar-placeholder .nav-item {
+    color: #FFFFFF  ;
+    font-size: large;
+    width: 150px;
+    margin: 0.5em;
+}
+
+.navbar-nav a.nav-link:focus-within,
+.navbar-nav a.nav-link:hover {
+    color: var(--mau-xanh-chu-dao)  ;
+}
+
+.nav-item .btn {
+    width: 150px ;
+}
+
+
+.page-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 2%;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.title-form {
+    font-size: xx-large;
+    text-align: center;
+    color: var(--mau-xanh-chu-dao);
+}
+
+.title-item {
+    color: #80a1af;
+}
+
+
+.form-container-items {
+    padding-top: 5%;
+}
+.nav-item #register-tab {
+    margin-left: 50px;
+}
+
+.nav-link{
+    color: whitesmoke;
+}
+
+.col-md-6 .btn-dang-nhap, .col-md-6 .btn-dang-ky {
+    background-color: #00a87d  ;
+    width: 100% ;
+    color: #FFFFFF;
+}
+
+.page-container input::placeholder {
+    color: rgba(71, 84, 103, 0.33);
+}
+.modal-body {
+    width: 150%;
+    background-color: #FFFFFF;
+    border-radius: 32px  ;
+    right: 26%;
+}
+
+.modal-content, .clearfix {
+    border-radius: 32px  ;
+}
+
+.modal.show .modal-dialog {
+    transform: none ;
+}
+
+.form-group {
+    padding: 2%;
+}
+

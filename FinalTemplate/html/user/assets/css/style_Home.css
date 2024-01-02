@@ -1,0 +1,72 @@
+
+body {
+    background-color: #21344f;
+    background-image: url('../img/bg-home.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 0;
+    padding: 0;
+}
+
+
+.page-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.form-container {
+    background-color: #fff;
+    padding: 2%;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 8%;
+    margin-top: 8%;
+}
+
+.title-form {
+    font-size: xx-large;
+    text-align: center;
+    color: var(--mau-xanh-chu-dao);
+}
+
+.title-item {
+    color: #80a1af;
+}
+
+.dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.form-container-items {
+    padding-top: 5%;
+}
+
+.btn-dat-ngay {
+    width: 100% ;
+    background-color: #a55eea ;
+    color: #FFFFFF;
+    padding: 5%;
+}
+.btn-dat-ngay:hover, .btn-dat-ngay:focus , .btn-dat-ngay:active {
+    background-color: rgba(165, 94, 234, 0.81) !important;
+    color: #FFFFFF !important;
+}
+
+.form-check-label {
+    color: #7c7c7c;
+}
+
+.form-group input::placeholder {
+    color: rgba(124, 124, 124, 0.65);
+}
+
