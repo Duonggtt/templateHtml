@@ -1,0 +1,71 @@
+/*#region           CSS navbar*/
+:root {
+    --mau-xanh-chu-dao: #75c392;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 3% !important;
+    color: #FFFFFF;
+}
+
+.nav-link {
+    color: #FFFFFF;
+}
+
+#navbar-placeholder .nav-item {
+    font-family: "Montserrat SemiBold", sans-serif;
+    color: #FFFFFF !important;
+    font-size: large;
+    width: 150px;
+    margin: 0.5em;
+}
+
+#navbar-placeholder .nav-item a {
+    font-family: "Montserrat SemiBold", sans-serif;
+
+}
+
+.navbar-nav a.nav-link:focus-within,
+.navbar-nav a.nav-link:hover {
+    color: var(--mau-xanh-chu-dao) !important;
+}
+
+.nav-item .btn {
+    width: 150px !important;
+}
+
+
+/*#endregion           CSS navbar*/
+
+
+.nav-item #register-tab {
+    margin-left: 50px;
+}
+
+.nav-tabs a {
+    /*width: 150% !important;*/
+    font-family: "Montserrat ExtraBold", sans-serif !important;
+    text-align: center;
+    color: var(--mau-xanh-chu-dao);
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+    display: flex;
+    align-items: center;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover,
+.nav-link:focus-visible, nav-tabs {
+    border: none !important;
+    border-bottom: #00a87d 3px solid !important;
+}
+
+

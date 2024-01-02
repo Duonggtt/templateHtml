@@ -1,22 +1,46 @@
-<link href="assets/css/style_Sign_in_up.css" rel="stylesheet">
-<script>
-    $(document).ready(function () {
-        $('#myTabs a').click(function (e) {
-            e.preventDefault();
-            $(this).tab('show');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập đăng ký</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--    <link href="assets/css/style_Sign_in_up.css" rel="stylesheet">-->
+    <script>
+        $(document).ready(function () {
+            $('#myTabs a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+
+            $('.show-modal').click(function () {
+                $('#myModal').modal('show');
+                $('#login-tab').tab('show');
+            });
+
+            $('#login-form').submit(function (e) {
+                e.preventDefault();
+                console.log('Login form submitted');
+                // Add your login logic here
+            });
+
+            $('#register-form').submit(function (e) {
+                e.preventDefault();
+                console.log('Register form submitted');
+                // Add your register logic here
+            });
         });
-
-        // Xử lý sự kiện khi nút trigger được nhấp
-        $('.show-modal').click(function () {
-            // Mở modal và chuyển đến tab đăng nhập
-            $('#myModal').modal('show');
-            $('#login-tab').tab('show');
-        });
-    });
-
-</script>
+    </script>
 
 
+</head>
+<body>
 <div class="container flex justify-content-center align-items-center">
     <div aria-labelledby="myModalLabel col-md-8" class="modal fade" id="myModal" role="dialog"
          tabindex="-1">
@@ -85,7 +109,7 @@
                                 </form>
                             </div>
                             <div class="tab-pane fade" id="register-content">
-                                <form>
+                                <form id="register-form">
                                     <!-- Register -->
                                     <div class="form-group">
                                         <div class="row form-container-items mx-auto">
@@ -188,3 +212,5 @@
         </div>
     </div>
 </div>
+</body>
+</html>
